@@ -79,11 +79,19 @@ DATABASES = {
     'default': {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "tellevoapp",
+        "USER": "avnadmin",
+        "PASSWORD": 'AVNS_vjCbYWqB1miH4ZXUfOp',
+        "HOST": "te-llevo-app-2023-duocuc-93ab.a.aivencloud.com",
+        "PORT": "20636",
+    },
+    'default':{
+    "ENGINE": "django.db.backends.mysql",
+        "NAME": "tellevoapp",
         "USER": "root",
         "PASSWORD": '',
         "HOST": "localhost",
         "PORT": "3306",
-    }
+    },
 }
 
 
