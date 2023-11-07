@@ -1,7 +1,6 @@
 from rest_framework.response import Response
 from rest_framework import serializers
 from tellevoapp.models import * 
-from django.contrib.auth.models import User
 
 class ubicacionSerializer(serializers.ModelSerializer):
     class Meta:

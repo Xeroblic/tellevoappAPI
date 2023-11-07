@@ -11,4 +11,5 @@ router.register('vehiculo', vehiculoViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('login/', custom_login, name='login'),
 ]

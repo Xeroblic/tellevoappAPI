@@ -1,6 +1,9 @@
 from django.db import models
 from django.conf import settings
+from django.http import JsonResponse
+from django.contrib.auth.models import User
 from django.contrib.auth.models import AbstractUser
+
 
 class CustomUser(AbstractUser):
     telefono = models.IntegerField(blank=True, null=True)
@@ -33,3 +36,6 @@ class Conductor(models.Model):
     
     def __str__(self):
         return self.nombre_usuario
+
+
+
