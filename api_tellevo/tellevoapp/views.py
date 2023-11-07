@@ -16,6 +16,7 @@ from django.contrib.auth.decorators import login_required
 from rest_framework.authtoken.models import Token
 from rest_framework.permissions import AllowAny
 from django.contrib.auth import get_user_model
+from rest_framework import generics
 
 
 # Create your views here.
@@ -66,4 +67,12 @@ def get_user_data(request):
     }
     return JsonResponse(data)
 
+
+class VehiculosUsuarioListView(generics.ListAPIView):
+    serializer_class = vehiculoSerializer
+
+    def get_queryset(self):
+        usuario_id = self.kwargs['usuario_id']
+        # Obtén todos los vehículos del usuario con el ID proporcionado
+        return Vehiculo.objects.filter(usuario__id=usuario_id)
     
