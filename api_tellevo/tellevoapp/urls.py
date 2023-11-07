@@ -12,4 +12,5 @@ router.register('vehiculo', vehiculoViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('login/', custom_login, name='login'),
+    path('api/get_user_data/', get_user_data, name='get_user_data'),
 ]

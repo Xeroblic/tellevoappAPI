@@ -11,6 +11,11 @@ from rest_framework.permissions import IsAuthenticated
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 from django.contrib.auth import authenticate, login
+from rest_framework import status
+from django.contrib.auth.decorators import login_required
+from rest_framework.authtoken.models import Token
+from rest_framework.permissions import AllowAny
+from django.contrib.auth import get_user_model
 
 
 # Create your views here.
@@ -35,19 +40,30 @@ class vehiculoViewSet(viewsets.ModelViewSet):
     serializer_class = vehiculoSerializer
     
 @csrf_exempt
-@require_POST
 def custom_login(request):
     # Recuperar las credenciales del cuerpo de la solicitud POST
     username = request.POST.get('username')
     password = request.POST.get('password')
 
-    # Autenticar al usuario
+    # Autenticar al usuario utilizando tu modelo personalizado
     user = authenticate(request, username=username, password=password)
 
     if user is not None:
         # Iniciar sesión para persistir la autenticación en la sesión
         login(request, user)
-        return JsonResponse({'detail': 'Login exitoso'})
+        response_data = {'user_id': user.id}
+        return JsonResponse(response_data)
     else:
-        return JsonResponse({'detail': 'Error en las credenciales'}, status=401)
+        return JsonResponse({'detail': 'Error en las credenciales. Verifica tu nombre de usuario y contraseña.'}, status=401)
+
+@login_required
+def get_user_data(request):
+    user = request.user
+    data = {
+        'username': user.username,
+        'email': user.email,
+        'telefono': getattr(user, 'telefono', None), 
+    }
+    return JsonResponse(data)
+
     
