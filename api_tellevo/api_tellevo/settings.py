@@ -76,14 +76,6 @@ WSGI_APPLICATION = 'api_tellevo.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "tellevoapp",
-        "USER": "avnadmin",
-        "PASSWORD": 'AVNS_vjCbYWqB1miH4ZXUfOp',
-        "HOST": "te-llevo-app-2023-duocuc-93ab.a.aivencloud.com",
-        "PORT": "20636",
-    },
     'default':{
     "ENGINE": "django.db.backends.mysql",
         "NAME": "tellevoapp",
@@ -117,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'UTC'
 
@@ -135,3 +127,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ],
+}
