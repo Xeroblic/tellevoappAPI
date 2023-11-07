@@ -4,7 +4,7 @@ from tellevoapp.views import *
 from tellevoapp.serializers import *
 
 router = routers.DefaultRouter()
-router.register('ubicacion', ubicacionViewSet)
+router.register('viaje', viajeViewSet)
 router.register('usuario', userViewSet)
 router.register('conductor', conductorViewSet)
 router.register('vehiculo', vehiculoViewSet)

@@ -20,9 +20,12 @@ from rest_framework import generics
 
 
 # Create your views here.
-class ubicacionViewSet(viewsets.ModelViewSet):
-    queryset = Ubicacion.objects.all()
-    serializer_class = ubicacionSerializer
+class viajeViewSet(viewsets.ModelViewSet):
+    queryset = Viaje.objects.all()
+    def get_serializer_class(self):
+        if self.request.method == 'POST':
+            return viajePostSerializer
+        return viajeFullSerializer
     
 class userViewSet(viewsets.ModelViewSet):
     queryset = CustomUser.objects.all()
