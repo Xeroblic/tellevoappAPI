@@ -6,6 +6,8 @@ from tellevoapp.serializers import *
 router = routers.DefaultRouter()
 router.register('ubicacion', ubicacionViewSet)
 router.register('usuario', userViewSet)
+router.register('conductor', conductorViewSet)
+router.register('vehiculo', vehiculoViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

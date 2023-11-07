@@ -12,6 +12,18 @@ class ubicacionViewSet(viewsets.ModelViewSet):
     serializer_class = ubicacionSerializer
     
 class userViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
+    queryset = CustomUser.objects.all()
     serializer_class = UserSerializer
+
+class conductorViewSet(viewsets.ModelViewSet):
+    queryset = Conductor.objects.all()
+
+    def get_serializer_class(self):
+        if self.request.method == 'POST':
+            return ConductorPostSerializer
+        return ConductorFullSerializer
+
+class vehiculoViewSet(viewsets.ModelViewSet):
+    queryset = Vehiculo.objects.all()
+    serializer_class = vehiculoSerializer
     
