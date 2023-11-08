@@ -24,6 +24,7 @@ class Conductor(models.Model):
     numero_telefono = models.IntegerField(null=False)
     correo_electronico = models.CharField(max_length=255, null=False)
     viajes_realizados = models.IntegerField(null=False)
+    nombre_completo = models.CharField(max_length=255, null=False)
     usuario = models.ForeignKey(CustomUser, on_delete=models.CASCADE, null=False)
     
     def __str__(self):

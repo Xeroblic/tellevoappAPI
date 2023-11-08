@@ -16,7 +16,7 @@ class UserSerializer(serializers.ModelSerializer):
 class viajePostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Viaje
-        fields = ['id', 'nombre_usuario', 'numero_telefono', 'correo_electronico', 'viajes_realizados', 'usuario']
+        fields = ['inicio_viaje', 'destino_viaje', 'tarifa', 'metodo_pago', 'usuario_viaje', 'conductor']
 
 class ConductorFullSerializer(serializers.ModelSerializer):
     usuario = UserSerializer()
