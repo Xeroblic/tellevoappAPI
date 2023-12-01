@@ -25,10 +25,11 @@ SECRET_KEY = 'django-insecure-$a&0x4-lcovba=9c*@02qub&2j=63jsi2!#83m^jj+arj%x1u)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 AUTH_USER_MODEL = 'tellevoapp.CustomUser'
-
 
 # Application definition
 
