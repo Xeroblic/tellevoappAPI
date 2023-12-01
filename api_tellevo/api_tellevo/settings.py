@@ -85,7 +85,6 @@ DATABASES = {
     "ENGINE": "django.db.backends.mysql",
         "NAME": "necarvacho$default",
         "USER": "necarvacho",
-        "PASSWORD" : "",
         "HOST": "necarvacho.mysql.pythonanywhere-services.com",
         "PORT": "3306",
     },
