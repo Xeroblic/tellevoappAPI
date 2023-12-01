@@ -31,8 +31,10 @@ class Conductor(models.Model):
         return self.nombre_usuario
 
 class Viaje(models.Model):
-    inicio_viaje = models.CharField(max_length=255, null=False)
-    destino_viaje = models.CharField(max_length=255, null=False)
+    inicio_lat = models.DecimalField(max_digits=10, decimal_places=10)
+    inicio_lon = models.DecimalField(max_digits=10, decimal_places=10)
+    destino_lat = models.DecimalField(max_digits=10, decimal_places=10)
+    destino_lon = models.DecimalField(max_digits=10, decimal_places=10)
     tarifa = models.IntegerField(null=False)
     metodo_pago = models.CharField(max_length=255, null=False)
     usuario_viaje = models.ForeignKey(CustomUser, on_delete=models.CASCADE, null=False)
