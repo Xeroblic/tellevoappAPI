@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'api_tellevo.wsgi.application'
 DATABASES = {
     'default':{
     "ENGINE": "django.db.backends.mysql",
-        "NAME": "necarvacho.mysql.pythonanywhere-services.com",
+        "NAME": "necarvacho$default",
         "USER": "necarvacho",
         "PASSWORD" : "",
-        "HOST": "127.0.0.1",
+        "HOST": "necarvacho.mysql.pythonanywhere-services.com",
         "PORT": "3306",
     },
 }
