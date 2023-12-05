@@ -16,19 +16,19 @@ class UserSerializer(serializers.ModelSerializer):
 class viajePostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Viaje
-        fields = ['inicio_viaje', 'destino_viaje', 'tarifa', 'metodo_pago', 'usuario_viaje', 'conductor']
+        fields = ['inicio_lat', 'inicio_lon', 'destino_lat', 'destino_lon', 'tarifa', 'metodo_pago', 'usuario_viaje', 'conductor']
 
 class ConductorFullSerializer(serializers.ModelSerializer):
     usuario = UserSerializer()
 
     class Meta:
         model = Conductor
-        fields = ['id', 'nombre_usuario', 'numero_telefono', 'correo_electronico', 'viajes_realizados', 'usuario']
+        fields = ['id', 'nombre_usuario', 'numero_telefono', 'correo_electronico', 'nombre_completo','viajes_realizados', 'usuario']
 
 class ConductorPostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Conductor
-        fields = ['id', 'nombre_usuario', 'numero_telefono', 'correo_electronico', 'viajes_realizados', 'usuario']
+        fields = ['id', 'nombre_usuario', 'numero_telefono', 'correo_electronico', 'nombre_completo', 'viajes_realizados', 'usuario']
 
 class vehiculoSerializer(serializers.ModelSerializer):
     class Meta:
