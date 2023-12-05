@@ -78,4 +78,16 @@ class VehiculosUsuarioListView(generics.ListAPIView):
         usuario_id = self.kwargs['usuario_id']
         # Obtén todos los vehículos del usuario con el ID proporcionado
         return Vehiculo.objects.filter(usuario__id=usuario_id)
-    
+
+
+
+
+
+
+##################################################################################
+
+
+
+
+def index(request):
+    return render(request,'core/index.html')

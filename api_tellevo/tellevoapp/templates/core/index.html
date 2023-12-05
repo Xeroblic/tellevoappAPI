@@ -1,0 +1,583 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Te LLevo APP</title>
+
+    <!-- Favicon -->
+    <!-- "{% static 'mobirise/css/mbr-additional.css'%}" -->
+    <link rel="icon" href="{% static 'img/core-img/favicon.ico'%}" />
+
+    <!-- Core Stylesheet -->
+
+    <link href="{% static 'css/style.css'%}" rel="stylesheet" />
+    <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet" />
+
+    <!-- Responsive CSS -->
+    <link href="{% static 'css/responsive.css'%}" rel="stylesheet" />
+  </head>
+
+  <body style="height: 100%; width: 100%">
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+      <div class="selene-preloader"></div>
+    </div>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header_area animated">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <!-- Menu Area Start -->
+          <div class="col-12">
+            <div class="menu_area">
+              <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#" style="color: aliceblue"
+                  >Te Llevo</a
+                >
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#selene-navbar"
+                  aria-controls="selene-navbar"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Menu Area -->
+                <div class="collapse navbar-collapse" id="selene-navbar">
+                  <ul class="navbar-nav ml-auto" id="nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#Disponibilidad">Disponibilidad</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#Enfoque">Enfoque</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#Características">Características</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#Descarga">Descarga</a>
+                    </li>
+                  </ul>
+                  <!-- Search btn -->
+                </div>
+                <!-- Search btn -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Wellcome Area Start ***** -->
+    <section class="welcome_area clearfix" id="home">
+      <!-- Shape -->
+      <div class="welcome-bg-shape">
+        <img
+          class="welcome-first-shape"
+          src="{% static 'img/core-img/welcome-bg-1.png'%}"
+          alt=""
+        />
+        <img
+          class="welcome-second-shape"
+          src="{% static 'img/core-img/welcome-bg-2.png'%}"
+          alt=""
+        />
+      </div>
+
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12 col-md-7">
+            <div class="welcome-content">
+              <h2><span>TE LLEVO</span> APP</h2>
+              <h4 style="width: 80%">
+                ¿Cansado de complicaciones al trasladarte de un lugar a otro?
+                ¡No busques más! Presentamos <strong>Te llevo app</strong>, la
+                herramienta perfecta diseñada por estudiantes, ¡para estudiantes
+                como tú!
+              </h4>
+            </div>
+            <div class="app-download-area">
+              <div class="app-download-btn active">
+                <!-- Google Store Btn -->
+                <a
+                  download="Tellevoapp.apk"
+                  href="https://public.bn.files.1drv.com/y4mX_Tisp19h7fwOuZFX_O_5fmtQOE4Z0E7Wn2KAysaYuU_5dmrDbK6ow88CNxQkINUIgwOdvsIExrmPejmGOnks-bqd-8di_IMEn4caZ2WV0DGvNoM2N8kvByJInhH0crZ7q10pnRuestG0KfYV30W9-hqT04uPRFe75OCSu5Y-OyUHGpoNy3hwGkV9ZeH-EPmelErJD3JZ6KwxSMh20x-iml7xPG0LIP0ViT7OrCDG8M"
+                  ><i class="fa fa-download" aria-hidden="true"></i>
+                  <p class="mb-0"><span>Descarga</span> Directa</p></a
+                >
+              </div>
+            </div>
+            <!-- Scroll btn -->
+            <div class="scroll-down-btn">
+              <a href="#about" class="scrollDown"
+                >Mas información
+                <i
+                  class="fa fa-angle-double-down scroll-down"
+                  aria-hidden="true"
+                ></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Device -->
+      <div class="welcome-mobile-device text-right">
+        <img src="{% static 'img/bg-img/wel-dev-1.png'%}" alt="" />
+        <img src="{% static 'img/bg-img/wel-dev-2.png'%}" alt="" />
+      </div>
+    </section>
+    <!-- ***** Wellcome Area End ***** -->
+
+    <!-- ***** About App Area Start ***** -->
+    <div class="about-app-area" id="about">
+      <!-- Shape -->
+      <div class="about-us-bg-shape">
+        <img src="{% static 'img/core-img/about-bg.png'%}" alt="" />
+      </div>
+
+      <div class="container-fluid" id="Disponibilidad">
+        <div class="row align-items-center">
+          <!-- About App Slider -->
+          <div class="col-12 col-md-7">
+            <div class="about-apps-slider owl-carousel">
+              <!-- Single Slide -->
+              <div class="app-single-slide">
+                <img src="{% static 'img/bg-img/slide-1.jpg'%}" alt="" />
+              </div>
+              <!-- Single Slide -->
+              <div class="app-single-slide">
+                <img src="{% static 'img/bg-img/slide-2.jpg'%}" alt="" />
+              </div>
+              <!-- Single Slide -->
+              <div class="app-single-slide">
+                <img src="{% static 'img/bg-img/slide-3.jpg'%}" alt="" />
+              </div>
+              <!-- Single Slide -->
+              <div class="app-single-slide">
+                <img src="{% static 'img/bg-img/slide-2.jpg'%}" alt="" />
+              </div>
+            </div>
+          </div>
+          <!-- About App Content -->
+          <div class="col-12 col-md-5" >
+            <div class="about-app-content">
+              <h2>Disponible para Android</h2>
+              <p>
+                Descarga <strong>Te llevo app</strong> ahora y simplifica tus
+                traslados diarios. Disponible en Android. ¡Hagamos que moverse
+                sea más fácil y divertido juntos! 🌟 #EstudiantesParaEstudiantes
+                #MovilidadSencilla
+              </p>
+              <div class="app-feature-icon d-flex">
+                <!-- Single App Feature Icon  -->
+                <div
+                  class="single-app-feature-icon d-flex align-items-center justify-content-center"
+                >
+                  <img src="{% static 'img/bg-img/icon-1.png'%}" alt="" />
+                </div>
+                <!-- Single App Feature Icon  -->
+                <div
+                  class="single-app-feature-icon d-flex align-items-center justify-content-center"
+                >
+                  <img src="{% static 'img/bg-img/icon-2.png'%}" alt="" />
+                </div>
+                <!-- Single App Feature Icon  -->
+                <div
+                  class="single-app-feature-icon d-flex align-items-center justify-content-center"
+                >
+                  <img src="{% static 'img/bg-img/icon-3.png'%}" alt="" />
+                </div>
+                <!-- Single App Feature Icon  -->
+                <div
+                  class="single-app-feature-icon d-flex align-items-center justify-content-center"
+                >
+                  <img src="{% static 'img/bg-img/icon-4.png'%}" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ***** About App Area End ***** -->
+
+    <!-- ***** App FAQ Area Start ***** -->
+    <section class="app-faq-area">
+      <div class="container" id="Enfoque">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="app-faq-content">
+              <h2>
+                Una Aplicacion para <br />
+                Estudiantes
+              </h2>
+              <p>
+                Personalizada para Estudiantes: Entendemos tus necesidades.
+                ¡Encuentra rutas y opciones de transporte amigables con tu
+                presupuesto de estudiante!.
+              </p>
+              <!-- Accordian Area -->
+              <div
+                class="accordions"
+                id="accordion"
+                role="tablist"
+                aria-multiselectable="true"
+              >
+                <!-- single accordian area start -->
+                <div class="panel single-accordion">
+                  <h6>
+                    <a
+                      role="button"
+                      class="collapsed"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseOne"
+                      >Fácil de Usar
+                      <span class="accor-open"
+                        ><i class="fa fa-plus" aria-hidden="true"></i
+                      ></span>
+                      <span class="accor-close"
+                        ><i class="fa fa-minus" aria-hidden="true"></i
+                      ></span>
+                    </a>
+                  </h6>
+                  <div id="collapseOne" class="accordion-content collapse">
+                    <p>
+                      Nuestra aplicación tiene una interfaz intuitiva que
+                      facilita la planificación de tus traslados.
+                    </p>
+                  </div>
+                </div>
+                <!-- single accordian area start -->
+                <div class="panel single-accordion">
+                  <h6>
+                    <a
+                      role="button"
+                      class="collapsed"
+                      aria-expanded="true"
+                      aria-controls="collapseTwo"
+                      data-parent="#accordion"
+                      data-toggle="collapse"
+                      href="#collapseTwo"
+                      >Alertas en Tiempo Real
+                      <span class="accor-open"
+                        ><i class="fa fa-plus" aria-hidden="true"></i
+                      ></span>
+                      <span class="accor-close"
+                        ><i class="fa fa-minus" aria-hidden="true"></i
+                      ></span>
+                    </a>
+                  </h6>
+                  <div id="collapseTwo" class="accordion-content collapse">
+                    <p>
+                      Mantente informado sobre el estado del tráfico, cambios en
+                      el transporte público y actualizaciones importantes.
+                    </p>
+                  </div>
+                </div>
+                <!-- single accordian area start -->
+                <div class="panel single-accordion">
+                  <h6>
+                    <a
+                      role="button"
+                      aria-expanded="true"
+                      aria-controls="collapseThree"
+                      class="collapsed"
+                      data-parent="#accordion"
+                      data-toggle="collapse"
+                      href="#collapseThree"
+                      >Ecológica y Económica
+                      <span class="accor-open"
+                        ><i class="fa fa-plus" aria-hidden="true"></i
+                      ></span>
+                      <span class="accor-close"
+                        ><i class="fa fa-minus" aria-hidden="true"></i
+                      ></span>
+                    </a>
+                  </h6>
+                  <div id="collapseThree" class="accordion-content collapse">
+                    <p>
+                      Contribuye al medio ambiente mientras ahorras dinero.
+                      Encuentra opciones de transporte compartido para reducir
+                      la huella de carbono y tus gastos diarios.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- App Users Map Area -->
+      <div class="app-users-map-area">
+        <img src="{% static 'img/bg-img/world-map.png'%}" alt="" />
+        <div class="map-pins">
+          <!-- Single Pin -->
+          <div class="single-map-pin"></div>
+          <!-- Single Pin -->
+          <div class="single-map-pin"></div>
+          <!-- Single Pin -->
+          <div class="single-map-pin"></div>
+          <!-- Single Pin -->
+          <div class="single-map-pin"></div>
+        </div>
+      </div>
+    </section>
+    <!-- ***** App FAQ Area End ***** -->
+
+    <!-- ***** Cool Facts Area Start ***** -->
+    <section class="cool_facts_area clearfix">
+      <div class="cool-facts-bg-shape">
+        <!-- Shape -->
+        <img src="{% static 'img/core-img/counters.png'%}" alt="" />
+        <!-- Cool Facts Content -->
+        <div class="coolfacts-content">
+          <div class="container">
+            <div class="row">
+              <!-- Single Cool Fact -->
+              <div class="col-12 col-sm-6 col-md">
+                <div
+                  class="single-cool-fact wow fadeInUp"
+                  data-wow-delay="0.2s"
+                >
+                  <div class="counter-area">
+                    <h3><span class="counter">2</span></h3>
+                  </div>
+                  <div class="cool-facts-content">
+                    <p>Años de Experiencia</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Single Cool Fact-->
+              <div class="col-12 col-sm-6 col-md">
+                <div
+                  class="single-cool-fact wow fadeInUp"
+                  data-wow-delay="0.4s"
+                >
+                  <div class="counter-area">
+                    <h3>+<span class="counter">500</span></h3>
+                  </div>
+                  <div class="cool-facts-content">
+                    <p>Estudiantes Felices</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Single Cool Fact -->
+              <div class="col-12 col-sm">
+                <div
+                  class="single-cool-fact wow fadeInUp"
+                  data-wow-delay="0.6s"
+                >
+                  <div class="counter-area">
+                    <h3><span class="counter">17</span>k</h3>
+                  </div>
+                  <div class="cool-facts-content">
+                    <p>Descargas en el primer minuto</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Single Cool Fact -->
+              <div class="col-12 col-sm">
+                <div
+                  class="single-cool-fact wow fadeInUp"
+                  data-wow-delay="0.8s"
+                >
+                  <div class="counter-area">
+                    <h3><span class="counter">351</span></h3>
+                  </div>
+                  <div class="cool-facts-content">
+                    <p>Trayectos Finalizados</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Single Cool Fact -->
+              <div class="col-12 col-sm">
+                <div
+                  class="single-cool-fact wow fadeInUp"
+                  data-wow-delay="0.8s"
+                >
+                  <div class="counter-area">
+                    <h3>+<span class="counter">1000</span></h3>
+                  </div>
+                  <div class="cool-facts-content">
+                    <p>Minutos ahorrados</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ***** Cool Facts Area End ***** -->
+
+    <!-- ***** App Feature Area Start ***** -->
+    <section class="app-features-area">
+      <div class="container" id="Características">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="app-features-content">
+              <h2>Características</h2>
+              <div class="row">
+                <!-- Single Feature Area -->
+                <div class="col-12 col-sm-6">
+                  <div class="single-feature-area">
+                    <img src="{% static 'img/bg-img/feature-1.png'%}" alt="" />
+                    <h5>Fácil de Usar</h5>
+                    <p>
+                      Nuestra aplicación tiene una interfaz intuitiva que
+                      facilita la planificación de tus traslados.
+                    </p>
+                  </div>
+                </div>
+                <!-- Single Feature Area -->
+                <div class="col-12 col-sm-6">
+                  <div class="single-feature-area">
+                    <img src="{% static 'img/bg-img/feature-2.png'%}" alt="" />
+                    <h5>Planificación Eficiente</h5>
+                    <p>
+                      Olvídate de llegar tarde a clases. Planifica tus traslados
+                      con nuestra función inteligente de planificación que tiene
+                      en cuenta tus horarios académicos
+                    </p>
+                  </div>
+                </div>
+                <!-- Single Feature Area -->
+                <div class="col-12 col-sm-6">
+                  <div class="single-feature-area">
+                    <img src="{% static 'img/bg-img/feature-3.png'%}" alt="" />
+                    <h5>Seguridad Primero</h5>
+                    <p>Conéctate con eventos y actividades en tu campus.</p>
+                  </div>
+                </div>
+                <!-- Single Feature Area -->
+                <div class="col-12 col-sm-6">
+                  <div class="single-feature-area">
+                    <img src="{% static 'img/bg-img/feature-4.png'%}" alt="" />
+                    <h5>Comparte Viajes</h5>
+                    <p>
+                      Conéctate con compañeros para compartir viajes y reducir
+                      costos.
+                    </p>
+                  </div>
+                </div>
+                <!-- Single Feature Area -->
+                <div class="col-12 col-sm-6">
+                  <div class="single-feature-area">
+                    <img src="{% static 'img/bg-img/feature-5.png'%}" alt="" />
+                    <h5>Ecológica y Económica</h5>
+                    <p>Contribuye al medio ambiente mientras ahorras dinero.</p>
+                  </div>
+                </div>
+                <!-- Single Feature Area -->
+                <div class="col-12 col-sm-6">
+                  <div class="single-feature-area">
+                    <img src="{% static 'img/bg-img/feature-6.png'%}" alt="" />
+                    <h5>Personalizada para Estudiantes</h5>
+                    <p>Entendemos tus necesidades.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- App Feature Thumb -->
+      <div class="app-feature-side-thumb">
+        <img src="{% static 'img/bg-img/feature-side.png'%}" alt="" />
+      </div>
+    </section>
+    <!-- ***** App Feature Area End ***** -->
+
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-area text-center clearfix" id="Descarga">
+      <!-- Shape 1 -->
+      <div class="footer-bg-shape">
+        <img
+          src="{% static 'img/core-img/footer-bg.png'%}"
+          alt="Footer Shape"
+        />
+      </div>
+      <!-- Shape 2 -->
+      <div class="footer-bg-shape-2">
+        <img src="{% static 'img/core-img/price-table.png'%}" alt="" />
+      </div>
+
+      <div class="container h-100">
+        <div class="row h-100 justify-content-center">
+          <div class="col-12 col-md-8">
+            <div class="footer-content">
+              <h2>Descargar APP</h2>
+              <h4>
+                ¡Descarga <strong>Te llevo app</strong> ahora y transforma tu
+                experiencia de traslado estudiantil! Disponible en Android
+              </h4>
+            </div>
+            <div class="app-download-area">
+              <div class="app-download-btn active">
+                <!-- Google Store Btn -->
+                <a
+                  download="Tellevoapp.apk"
+                  href="https://public.bn.files.1drv.com/y4mX_Tisp19h7fwOuZFX_O_5fmtQOE4Z0E7Wn2KAysaYuU_5dmrDbK6ow88CNxQkINUIgwOdvsIExrmPejmGOnks-bqd-8di_IMEn4caZ2WV0DGvNoM2N8kvByJInhH0crZ7q10pnRuestG0KfYV30W9-hqT04uPRFe75OCSu5Y-OyUHGpoNy3hwGkV9ZeH-EPmelErJD3JZ6KwxSMh20x-iml7xPG0LIP0ViT7OrCDG8M"
+                  ><i class="fa fa-download" aria-hidden="true"></i>
+                  <p class="mb-0"><span>Descarga</span> Directa</p></a
+                >
+                <br><br><br>
+              </div>
+            </div>
+            <!-- Foooter Text-->
+            <div class="copyright-text">
+              <p>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                Nicolas Muñoz || Néstor Carvacho 2023 para Aplicaciones Mobiles
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ***** Footer Area End ***** -->
+
+    <!-- jQuery-2.2.4 js -->
+    <script src="{% static 'js/jquery-2.2.4.min.js'%}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'js/popper.min.js'%}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'js/plugins.js'%}"></script>
+    <!-- Active js -->
+    <script src="{% static 'js/active.js'%}"></script>
+    <!-- map-active.js -->
+    <script src="{% static 'js/map-active.js'%}"></script>
+  </body>
+</html>

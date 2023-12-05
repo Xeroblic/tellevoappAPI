@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -81,14 +82,18 @@ WSGI_APPLICATION = 'api_tellevo.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default':{
-    "ENGINE": "django.db.backends.mysql",
-        "NAME": "necarvacho$TellevoappAPI",
-        "USER": "necarvacho",
-        "PASSWORD": "N17382965-5",
-        "HOST": "necarvacho.mysql.pythonanywhere-services.com",
-        "PORT": "3306",
-    },
+    #'default':{
+    #"ENGINE": "django.db.backends.mysql",
+    #    "NAME": "necarvacho$TellevoappAPI",
+    #    "USER": "necarvacho",
+    #    "PASSWORD": "N17382965-5",
+    #    "HOST": "necarvacho.mysql.pythonanywhere-services.com",
+    #    "PORT": "3306",
+    #},
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 
@@ -116,7 +121,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'es'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Santiago'
 
 USE_I18N = True
 
@@ -127,6 +132,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
