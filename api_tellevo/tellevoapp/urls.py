@@ -15,5 +15,5 @@ urlpatterns = [
     path('login/', custom_login, name='login'),
     path('api/get_user_data/', get_user_data, name='get_user_data'),
     path('vehiculos/usuario/<int:usuario_id>/', VehiculosUsuarioListView.as_view(), name='vehiculos-usuario-list'),
-    path('index', index, name = 'index'),
+    path('home', index, name = 'home'),
 ]
